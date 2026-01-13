@@ -1,0 +1,303 @@
+/* Catppuccin Mocha Color Palette */
+:root {
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-surface0: #313244;
+  --ctp-surface1: #45475a;
+  --ctp-surface2: #585b70;
+  --ctp-text: #cdd6f4;
+  --ctp-subtext0: #a6adc8;
+  --ctp-subtext1: #bac2de;
+  --ctp-green: #a6e3a1;
+  --ctp-blue: #89b4fa;
+  --ctp-sky: #89dceb;
+  --ctp-pink: #f5c2e7;
+  --ctp-mauve: #cba6f7;
+  --ctp-red: #f38ba8;
+  --ctp-peach: #fab387;
+  --ctp-yellow: #f9e2af;
+  --ctp-teal: #94e2d5;
+  --ctp-lavender: #b4befe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--ctp-base);
+  color: var(--ctp-text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#terminal {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#output {
+  flex: 1;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.output-line {
+  margin-bottom: 2px;
+}
+
+.prompt-user {
+  color: var(--ctp-green);
+}
+
+.prompt-at {
+  color: var(--ctp-text);
+}
+
+.prompt-host {
+  color: var(--ctp-blue);
+}
+
+.prompt-separator {
+  color: var(--ctp-text);
+}
+
+.prompt-path {
+  color: var(--ctp-mauve);
+}
+
+.prompt-symbol {
+  color: var(--ctp-text);
+}
+
+.directory {
+  color: var(--ctp-blue);
+  font-weight: bold;
+}
+
+.file {
+  color: var(--ctp-text);
+}
+
+.file-md {
+  color: var(--ctp-green);
+}
+
+.error {
+  color: var(--ctp-red);
+}
+
+.success {
+  color: var(--ctp-green);
+}
+
+.info {
+  color: var(--ctp-sky);
+}
+
+.warning {
+  color: var(--ctp-yellow);
+}
+
+/* Input line */
+#input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+#prompt {
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+#input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--ctp-text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  caret-color: var(--ctp-text);
+}
+
+/* Rendered Markdown Styles */
+.markdown-content {
+  padding: 8px 0;
+}
+
+.markdown-content h1 {
+  color: var(--ctp-pink);
+  font-size: 1.5em;
+  margin: 16px 0 8px 0;
+  border-bottom: 1px solid var(--ctp-surface1);
+  padding-bottom: 4px;
+}
+
+.markdown-content h2 {
+  color: var(--ctp-mauve);
+  font-size: 1.3em;
+  margin: 14px 0 6px 0;
+}
+
+.markdown-content h3 {
+  color: var(--ctp-lavender);
+  font-size: 1.1em;
+  margin: 12px 0 4px 0;
+}
+
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  color: var(--ctp-blue);
+  margin: 10px 0 4px 0;
+}
+
+.markdown-content p {
+  margin: 8px 0;
+}
+
+.markdown-content a {
+  color: var(--ctp-sky);
+  text-decoration: underline;
+}
+
+.markdown-content a:hover {
+  color: var(--ctp-teal);
+}
+
+.markdown-content strong {
+  color: var(--ctp-peach);
+  font-weight: bold;
+}
+
+.markdown-content em {
+  color: var(--ctp-yellow);
+  font-style: italic;
+}
+
+.markdown-content code {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-green);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.markdown-content pre {
+  background-color: var(--ctp-mantle);
+  border: 1px solid var(--ctp-surface0);
+  border-radius: 6px;
+  padding: 12px;
+  margin: 12px 0;
+  overflow-x: auto;
+}
+
+.markdown-content pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--ctp-text);
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+.markdown-content li {
+  margin: 4px 0;
+}
+
+.markdown-content li::marker {
+  color: var(--ctp-blue);
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid var(--ctp-mauve);
+  padding-left: 12px;
+  margin: 12px 0;
+  color: var(--ctp-subtext0);
+  font-style: italic;
+}
+
+.markdown-content hr {
+  border: none;
+  border-top: 1px solid var(--ctp-surface1);
+  margin: 16px 0;
+}
+
+.markdown-content table {
+  border-collapse: collapse;
+  margin: 12px 0;
+  width: 100%;
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid var(--ctp-surface1);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.markdown-content th {
+  background-color: var(--ctp-surface0);
+  color: var(--ctp-blue);
+}
+
+/* ASCII Art / Neofetch styling */
+.ascii-art {
+  color: var(--ctp-mauve);
+  line-height: 1.2;
+}
+
+.neofetch-info {
+  color: var(--ctp-text);
+}
+
+.neofetch-label {
+  color: var(--ctp-blue);
+  font-weight: bold;
+}
+
+.neofetch-value {
+  color: var(--ctp-text);
+}
+
+/* Welcome banner */
+.welcome-banner {
+  color: var(--ctp-mauve);
+  margin-bottom: 16px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--ctp-surface2);
+  color: var(--ctp-text);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ctp-mantle);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ctp-surface1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ctp-surface2);
+}
